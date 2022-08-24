@@ -20,19 +20,18 @@ const panelConfig = {
           onChange: (evt) => { console.log("Select Changed!", evt); }}}
   ]
 };
-const createIconButton = (icon) => {
-  // create a button using a blueprintjs icon
-  const popoverButton = document.createElement("button");
-  popoverButton.className = "bp3-button bp3-minimal rm-mobile-button dont-unfocus-block";
-  popoverButton.tabIndex = 0;
 
-  const popoverIcon = document.createElement("span");
-  popoverIcon.className = `bp3-icon bp3-icon-${icon}`;
-
-  popoverButton.appendChild(popoverIcon);
-
-  return popoverButton;
-};
+function createFootnoteBlock(uid){
+  //get the cursor position
+  let cursorPos = document.querySelectorAll('textarea')[0].selectionStart
+  let str = 'very cool ((more here)) after text'
+  let bef = str.substring(0, cursorPos).split('((').pop()
+  let aft = str.substring(cursorPos).split('))')[0]
+  let block = bef + aft
+  let uid = 'BLOCKUID'
+  let blText = str.replace(`((${bef + aft}))`, `((${uid}))`)
+  console.log(blText)
+}
 
 function createFootnoteButton(text){
   const footnote = document.createElement("div");
