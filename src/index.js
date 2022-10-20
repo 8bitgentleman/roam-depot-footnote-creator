@@ -8,6 +8,8 @@ var runners = {
 }
 
 const FOOTNOTE_CREATOR_ID = 'footnote-creator';
+const superscript = ["⁰","¹", "²", "³", "⁴", "⁵", "⁶", "⁷", "⁸", "⁹"];
+const subscript = ["₀", "₁", "₂", "₃", "₄", "₅", "₆", "₇", "₈", "₉"];
 
 const panelConfig = {
   tabTitle: "Footnote Creator",
