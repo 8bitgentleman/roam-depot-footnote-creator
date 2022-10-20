@@ -45,7 +45,7 @@ function createFootnoteButton(text){
         <div class="rm-autocomplete-result">
             <span>${text}</span>
         </div>
-        <div class="bp3-text-overflow-ellipsis">Create as footnote</div>
+        <div class="bp3-text-overflow-ellipsis" style="color: rgb(129, 145, 157);">Create as footnote</div>
   `;
   
   footnote.innerHTML = markup
